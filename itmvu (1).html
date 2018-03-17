@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Itm</title>
+        <link rel="stylesheet" href="css/master.css">
+    </head>
+    <style>
+ 
+body{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*background-size: 200%;*/
+    opacity: 100;
+    filter:alpha(opacity=40);
+  }
+.cont {
+    min-width: 256px;
+    width: 100%;
+    margin: 0 auto;
+
+    
+    /*position: fixed;
+     position: absolute;*/
+}
+
+h1, h2 {
+    background-color:rgba(255, 0, 0, 0.6);;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    border-radius:50px;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: #7f7f7f;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.disabled {
+    display: none;
+}
+/* end css unit */
+
+
+/* start nav bar */
+nav {
+    width: 100%;
+    background: #ddd;
+    padding: 4px 0;
+    clear: both;
+}
+
+nav img {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+/* end nav bar */
+
+
+/* start header */
+/* end header */
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: #ccc;
+}
+
+
+html::before,
+html::after,
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: .2vmin;
+  height: .2vmin;
+  border-radius: 50%;
+  background-size: 100%;
+  color: transparent;
+}
+
+html::before {
+  box-shadow: 93vw 63vh .3vmin rgba(255,255,255,.8),
+              3vw 17vh .3vmin rgba(255,255,255,.8),
+              28vw 85vh .3vmin rgba(255,255,255,.8),
+              97vw 82vh .3vmin rgba(255,255,255,.8),
+              55vw 83vh .3vmin rgba(255,255,255,.8),
+              74vw 72vh .3vmin rgba(255,255,255,.8),
+              84vw 11vh .3vmin rgba(255,255,255,.8),
+              32vw 6vh .3vmin rgba(255,255,255,.8),
+              45vw 92vh .3vmin rgba(255,255,255,.8),
+              98vw 57vh .3vmin rgba(255,255,255,.8),
+              63vw 98vh .3vmin rgba(255,255,255,.8),
+              90vw 46vh .3vmin rgba(255,255,255,.8),
+              50vw 86vh .3vmin rgba(255,255,255,.8),
+              38vw 21vh .3vmin rgba(255,255,255,.8),
+              74vw 2vh .3vmin rgba(255,255,255,.8),
+              89vw 22vh .3vmin rgba(255,255,255,.8),
+              39vw 0vh .3vmin rgba(255,255,255,.8),
+              25vw 89vh .3vmin rgba(255,255,255,.8),
+              54vw 58vh .3vmin rgba(255,255,255,.8),
+              81vw 39vh .3vmin rgba(255,255,255,.8),
+              51vw 8vh .3vmin rgba(255,255,255,.8),
+              24vw 56vh .3vmin rgba(255,255,255,.8),
+              50vw 23vh .3vmin rgba(255,255,255,.8),
+              62vw 34vh .3vmin rgba(255,255,255,.8),
+              10vw 77vh .3vmin rgba(255,255,255,.8),
+              92vw 45vh .3vmin rgba(255,255,255,.8),
+              70vw 40vh .3vmin rgba(255,255,255,.8),
+              2vw 53vh .3vmin rgba(255,255,255,.8),
+              3vw 54vh .3vmin rgba(255,255,255,.8),
+              18vw 21vh .3vmin rgba(255,255,255,.8),
+              48vw 47vh .3vmin rgba(255,255,255,.8),
+              83vw 96vh .3vmin rgba(255,255,255,.8),
+              26vw 32vh .3vmin rgba(255,255,255,.8),
+              46vw 9vh .3vmin rgba(255,255,255,.8),
+              2vw 13vh .3vmin rgba(255,255,255,.8),
+              29vw 63vh .3vmin rgba(255,255,255,.8),
+              17vw 90vh .3vmin rgba(255,255,255,.8),
+              78vw 9vh .3vmin rgba(255,255,255,.8),
+              15vw 39vh .3vmin rgba(255,255,255,.8),
+              90vw 5vh .3vmin rgba(255,255,255,.8);
+}
+
+html::after { 
+  box-shadow: 67vw 35vh .2vmin .1vmin rgba(255,200,200,.8),
+              89vw 13vh .2vmin .1vmin rgba(255,200,200,.8),
+              77vw 62vh .2vmin .1vmin rgba(255,200,200,.8),
+              1vw 74vh .2vmin .1vmin rgba(255,200,200,.8),
+              38vw 15vh .2vmin .1vmin rgba(255,200,200,.8),
+              79vw 10vh .2vmin .1vmin rgba(255,200,200,.8),
+              16vw 47vh .2vmin .1vmin rgba(255,200,200,.8),
+              74vw 71vh .2vmin .1vmin rgba(255,200,200,.8),
+              30vw 96vh .2vmin .1vmin rgba(255,200,200,.8),
+              13vw 98vh .2vmin .1vmin rgba(255,200,200,.8),
+              9vw 40vh .2vmin .1vmin rgba(255,200,200,.8),
+              9vw 71vh .2vmin .1vmin rgba(255,200,200,.8),
+              12vw 93vh .2vmin .1vmin rgba(255,200,200,.8),
+              91vw 26vh .2vmin .1vmin rgba(255,200,200,.8),
+              73vw 48vh .2vmin .1vmin rgba(255,200,200,.8),
+              61vw 46vh .2vmin .1vmin rgba(255,200,200,.8),
+              20vw 3vh .2vmin .1vmin rgba(255,200,200,.8),
+              90vw 59vh .2vmin .1vmin rgba(255,200,200,.8),
+              48vw 72vh .2vmin .1vmin rgba(255,200,200,.8),
+              91vw 68vh .2vmin .1vmin rgba(255,200,200,.8);
+}
+
+body::before {
+  box-shadow: 30vw 90vh .2vmin rgba(190,200,255,.9),
+              93vw 64vh .2vmin rgba(190,200,255,.9),
+              75vw 80vh .2vmin rgba(190,200,255,.9),
+              37vw 24vh .2vmin rgba(190,200,255,.9),
+              83vw 58vh .2vmin rgba(190,200,255,.9),
+              12vw 36vh .2vmin rgba(190,200,255,.9),
+              62vw 82vh .2vmin rgba(190,200,255,.9),
+              87vw 91vh .2vmin rgba(190,200,255,.9),
+              9vw 2vh .2vmin rgba(190,200,255,.9),
+              99vw 46vh .2vmin rgba(190,200,255,.9),
+              39vw 86vh .2vmin rgba(190,200,255,.9),
+              48vw 42vh .2vmin rgba(190,200,255,.9),
+              53vw 24vh .2vmin rgba(190,200,255,.9),
+              63vw 42vh .2vmin rgba(190,200,255,.9),
+              2vw 53vh .2vmin rgba(190,200,255,.9),
+              67vw 11vh .2vmin rgba(190,200,255,.9),
+              32vw 44vh .2vmin rgba(190,200,255,.9),
+              0vw 82vh .2vmin rgba(190,200,255,.9),
+              51vw 47vh .2vmin rgba(190,200,255,.9),
+              74vw 30vh .2vmin rgba(190,200,255,.9);
+}
+
+body::after {
+  box-shadow: 80vw 64vh .1vmin rgba(200,255,230,.7),
+              32vw 45vh .1vmin rgba(200,255,230,.7),
+              65vw 62vh .1vmin rgba(200,255,230,.7),
+              22vw 55vh .1vmin rgba(200,255,230,.7),
+              68vw 19vh .1vmin rgba(200,255,230,.7),
+              54vw 34vh .1vmin rgba(200,255,230,.7),
+              1vw 56vh .1vmin rgba(200,255,230,.7),
+              95vw 1vh .1vmin rgba(200,255,230,.7),
+              60vw 93vh .1vmin rgba(200,255,230,.7),
+              14vw 82vh .1vmin rgba(200,255,230,.7),
+              6vw 64vh .1vmin rgba(200,255,230,.7),
+              19vw 12vh .1vmin rgba(200,255,230,.7),
+              25vw 39vh .1vmin rgba(200,255,230,.7),
+              21vw 36vh .1vmin rgba(200,255,230,.7),
+              4vw 10vh .1vmin rgba(200,255,230,.7),
+              85vw 70vh .1vmin rgba(200,255,230,.7),
+              54vw 93vh .1vmin rgba(200,255,230,.7),
+              9vw 46vh .1vmin rgba(200,255,230,.7),
+              63vw 59vh .1vmin rgba(200,255,230,.7),
+              48vw 28vh .1vmin rgba(200,255,230,.7);
+}
+
+h1 {
+  margin: 0;
+  height: 12vmin;
+  width: 120vmin;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -26vmin;
+  left: 29vmin;
+  width: 62vmin;
+  height: 62vmin;
+  border-radius: 50%;
+  border: 1.3vmin solid currentColor;
+  box-sizing: border-box;
+}
+
+em {
+  font-family: 'Josefin Sans', sans-serif;
+  color: currentColor;
+  font-size: 15vmin;
+  position: relative;
+  font-style: normal;
+  width: 20vmin;
+  text-align: center;
+}
+
+em.planet {
+  -webkit-animation: planet-rotate 4s linear infinite;
+  animation: planet-rotate 4s linear infinite;
+  position: relative;
+}
+
+em.planet::before {
+  content: "";
+  position: absolute;
+  top: -.5vmin;
+  left: 3.5vmin;
+  z-index: -1;
+  width: 13vmin;
+  height: 13vmin;
+  border-radius: 50%;
+  background: black;
+}
+
+em.planet.left {
+  -webkit-transform-origin: 40vmin 5vmin;
+  transform-origin: 40vmin 5vmin;
+}
+
+em.planet.right {
+  -webkit-transform-origin: -20vmin 5vmin;
+  transform-origin: -20vmin 5vmin;
+}
+
+@-webkit-keyframes planet-rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes planet-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+/* start content */
+.src {
+    width: 100px;
+    height: 100px;
+    background: #f00;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.learn, .other {
+    width: 100%;
+    /*background: #00f;*/
+    padding: 10px 0;
+    margin: 12px 0;
+    overflow: hidden;
+}
+
+.improveSkills {
+    width: 50%;
+    /*background: #00f;*/
+    padding: 10px 0;
+    margin-bottom: 12px;
+}
+
+.improveSkills {
+    float: left;
+}
+
+
+.text {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 4px 0 0 0;
+}
+
+.videos {
+
+  
+    background-image: url('https://www.winxdvd.com/youtube-downloader/pic_style/soft01t-seven.png');
+}
+
+.websites {
+    background-image: url('https://media-exp1.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAlOAAAAJGEzZGNmNzMyLWE2MWItNDViMy04NzMzLTI0MjNiZWNjYzMzYQ.png');
+
+}
+
+.practice {
+    background-image: url('https://www.oncc.org/files/icon-practice-tests.png');
+}
+
+.mood {
+    background-image: url('https://www.busbyhouse.co.uk/images/smilie-happy.png');
+}
+
+/* end content */
+
+
+/* start videos */
+.c_content {
+    width: 120px;
+    height: 120px;
+    margin: 4px;
+    float: left;
+}
+
+.lang, .link {
+    width: 100%;
+    height: 80%;
+    background: #ddd;
+}
+
+.weight{
+    width: 100%;
+    height: 20%;
+    background: #8bc34a;
+}
+/* end videos */
+
+
+/* start website */
+.website .weight{
+    font-size: 14px;
+}
+/* end websites */
+
+
+/* start footer */
+/*footer {
+    background: #333;
+    text-align: center;
+    border-top: 4px solid #8bc34a;
+    margin: 0;
+    overflow: hidden;
+    clear: both;
+}*/
+
+img {
+    width: 60px;
+    height: 60px;
+    margin: 6px;
+    border-radius: 30%;
+    float: center;
+}
+
+/*footer span {
+    color: yellow;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 26px 0;
+    box-shadow: green;
+    /*position: fixed;
+    height: 256px;
+    width: 1000px;
+}*/
+
+footer span a {
+    color: #f00;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+        
+    </style>
+    <body>
+        <div id="mySidenav" class="sidenav">
+    <div class="tab">
+    <button type="button" onclick="myFunction()" style="height: 50px">home</button>
+    <button type="button" onclick="contact()" style="height: 50px">contact</button>
+<p id="demo"></p>
+<p style="background-color:black" id="demo1"><p>
+    <script>
+function myFunction() { 
+    document.getElementById("demo1").innerHTML = "hey,this is my awesome website and i will tell you all information about the best there is videos websites and events are available of ITMVU. you just want to click on below icons.";
+}
+/*function otherf()
+{
+    document.getElementById("demo1").innerHTML="ITM VOCATIONAL UNIVERSITY is the best ";
+
+}*/
+function contact()
+{
+    document.getElementById("demo1").innerHTML="we will add something";
+}
+</script>
+
+
+
+
+
+        <header><!-- start header -->
+                <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+<h1>
+  <em>I</em>
+  <em class="planet left">O</em>
+  <em>T</em>
+ 
+  <em class="planet right">O</em>
+  <em>M</em>
+</h1>
+ </header><!-- end header -->
+  
+        <nav class="disabled" id="v_nav"><!-- start nav bar -->
+            <div class="cont">
+                <img src="https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/previous-512.png" onclick="v_back()">
+                <h2>Vidoes</h2>
+            </div>
+        </nav>
+        <nav class="disabled" id="w_nav">
+            <div class="cont">
+                <img src="https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/previous-512.png" onclick="w_back()">
+                <h2>Website</h2>
+            </div>
+        </nav>
+        <nav class="disabled" id="p_nav">
+            <div class="cont">
+                <img src="https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/previous-512.png" onclick="p_back()">
+                <h2>events</h2>
+            </div>
+        </nav>
+        <div id="content" class=""><!-- start Content -->
+            <div class="cont">
+                <div class="learn" onclick="go_v()">
+                    <div class="src videos">
+                        
+                    </div>
+                    <div class="text"> &lt; Videos &gt;</div>
+                </div>
+                
+                <div class="improveSkills">
+                    <div class="src websites" onclick="go_w()">
+                        
+                    </div>
+                    <div class="text">&lt;Website&gt;</div>
+                </div>
+                <div class="improveSkills">
+                    <div class="src practice" onclick="go_p()">
+                        
+                    </div>
+                    <div class="text">&lt;events&gt;</div>
+                </div>
+            </div>
+        </div><!-- end content -->
+        
+        <div id="videos" class="video disabled"><!-- start videos -->
+            <div class="cont">
+                <div class="c_content">
+
+
+                    <a href="https://www.youtube.com/watch?v=8e-wgQnsFxE&list=PLLNPJwOQ2ZK6PYKgGLPHD52oru0Emw7IK" target="_blank">
+                        <div class="lang">
+                            DBMS
+                        </div>
+                        <div class="weight">
+                            44 Video
+                        </div>
+
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://www.youtube.com/watch?v=liRPtvj7bFU&list=PL0E131A78ABFBFDD0" target="_blank">
+                        <div class="lang">
+                            MM
+                        </div>
+                        <div class="weight">
+                            38 Video
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://www.youtube.com/watch?v=gY0MwGLq9W8&list=PLGdMwVKbjVQ8Ew7KUp65sRL9_k2_3xlKE" target="_blank">
+                        <div class="lang">
+                            CA
+                        </div>
+                        <div class="weight">
+                            55 Video
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://www.youtube.com/watch?v=lj7ZnyskZuA&list=PLesgViD0jhW-Ydpei3GnpoUwUGbLg50-G" target="_blank">
+                        <div class="lang">
+                            POM
+                        </div>
+                        <div class="weight">
+                            57 Video
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://www.youtube.com/watch?v=Gc8emFk-2vc&list=PL612CE2AB6F38DF9A" target="_blank">
+                        <div class="lang">
+                            GTC
+                            
+                        </div>
+                        <div class="weight">
+                            40 Video
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://www.youtube.com/watch?v=r59xYe3Vyks&list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al" target="_blank">
+                        <div class="lang">
+                            JAvA
+                        </div>
+                        <div class="weight">
+                            93 Video
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://goo.gl/MqgiqA" target="_blank">
+                        <div class="lang">
+                            JavaScript 
+                        </div>
+                        <div class="weight" target="_blank">
+                            19 Video
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://goo.gl/h6qPnZ" target="_blank">
+                        <div class="lang">
+                            
+                           JQUERY 
+                        </div>
+                        <div class="weight" target="_blank">
+                            53 Video
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://www.youtube.com/watch?v=LZFoktwiars&list=PL0gIV7t6l2iIsR55zsSgeiOw9Bd_IUTbY" target="_blank">
+                        <div class="lang">
+                            C++
+                        </div>
+                        <div class="weight">
+                            57 Video
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://goo.gl/qVAXqR" target="_blank">
+                        <div class="lang">
+                            PHP
+                        </div>
+                        <div class="weight">
+                            103 Video
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://goo.gl/VRJ9IB" target="_blank">
+                        <div class="lang">
+                            MySQL
+                        </div>
+                        <div class="weight">
+                            44 Video
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div><!-- end videos -->
+        
+        <div class="website disabled" id="web"><!-- start websites -->
+            <div class="cont">
+                <div class="c_content">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">
+                        <div class="link">
+                            MDN Web Docs
+                        </div>
+                        <div class="weight">
+                            The Best Source
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="http://www.w3schools.com/" target="_blank">
+                        <div class="link">
+                            w3schools
+                        </div>
+                        <div class="weight">
+                            Good Source
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://www.sitepoint.com/html-css/" target="_blank">
+                        <div class="link">
+                            sitepoint
+                        </div>
+                        <div class="weight">
+                            Advanced Examples
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="http://getbootstrap.com/" target="_blank">
+                        <div class="link">
+                            getbootstrap
+                        </div>
+                        <div class="weight">
+                            bootstrap site
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="http://php.net/" target="_blank">
+                        <div class="link">
+                            php.net
+                        </div>
+                        <div class="weight">
+                            PHP Manual
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="http://www.phptherightway.com/" target="_blank">
+                        <div class="link">
+                            PHP The Right Way
+                        </div>
+                        <div class="weight">
+                            For PHP Language
+                        </div>
+                    </a>
+                </div>
+                <div class="c_content">
+                    <a href="https://dev.mysql.com/" target="_blank">
+                        <div class="link">
+                            mysql.com
+                        </div>
+                        <div class="weight">
+                            MySQL Manual
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div><!-- end websites -->
+       
+
+
+
+
+       <footer><!-- start footer--> 
+            <div class="cont">
+                <a href="https://collegedunia.com/university/57898-itm-vocational-university-itmvu-vadodara/courses-fees" target="_blank">
+                    <img src="https://pbs.twimg.com/profile_images/378800000609380483/7c4bd28fccb2d416715dd2d76d817225.png">
+                </a>
+                <style>
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+                <span><a href="" target="_blank">ITM VOCATIONAL UNIVERSITY</a></span>
+            </div>
+          </style>
+        </footer><!-- end footer -->
+        
+<script>
+var content = document.getElementById("content"),
+    v_content = document.getElementById("videos"),
+    v_nav = document.getElementById("v_nav"),
+    w_content = document.getElementById("web"),
+    w_nav = document.getElementById("w_nav"),
+    p_content = document.getElementById("practice"),
+    p_nav = document.getElementById("p_nav"),
+    m_content = document.getElementById("mood"),
+    m_nav = document.getElementById("m_nav");
+    
+function go_v() {
+    "use strict";
+    content.classList.toggle("disabled");
+    v_nav.classList.toggle("disabled");
+    v_content.classList.toggle("disabled");
+}
+
+function v_back() {
+    "use strict";
+    content.classList.toggle("disabled");
+    v_nav.classList.toggle("disabled");
+    v_content.classList.toggle("disabled");
+}
+
+function go_w() {
+    "use strict";
+    content.classList.toggle("disabled");
+    w_nav.classList.toggle("disabled");
+    w_content.classList.toggle("disabled");
+}
+
+function w_back() {
+    "use strict";
+    content.classList.toggle("disabled");
+    w_nav.classList.toggle("disabled");
+    w_content.classList.toggle("disabled");
+}
+
+function go_p() {
+    "use strict";
+    content.classList.toggle("disabled");
+    p_nav.classList.toggle("disabled");
+    p_content.classList.toggle("disabled");
+}
+
+function p_back() {
+    "use strict";
+    content.classList.toggle("disabled");
+    p_nav.classList.toggle("disabled");
+    p_content.classList.toggle("disabled");
+}
+
+function go_m() {
+    "use strict";
+    content.classList.toggle("disabled");
+    m_nav.classList.toggle("disabled");
+    m_content.classList.toggle("disabled");
+}
+
+function m_back() {
+    "use strict";
+    content.classList.toggle("disabled");
+    m_nav.classList.toggle("disabled");
+    m_content.classList.toggle("disabled");
+}
+</script>
+    </body>
+</html>
